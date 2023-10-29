@@ -1,16 +1,28 @@
 package it.progetti.roberto.junit5corso;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 class ContactManagerTest {
+
+    private ContactManager contactManager;
+
+    // example of @BeforeAll e @BeforeEach
+    @BeforeAll
+    public static void setupAll() {
+        System.out.println("Shloud Print Before All Tests");
+    }
+
+    @BeforeEach
+    public void setup() {
+        contactManager = new ContactManager();
+    }
+
+
 
     // example of testing with Assertions
 
     @Test
     void shouldCreateContract() {
-        ContactManager contactManager = new ContactManager();
         contactManager.addContact("Roberto", "Gianotto", "0123456789");
         // assertion example
         Assertions.assertFalse(contactManager.getAllContacts().isEmpty());
@@ -27,8 +39,6 @@ class ContactManagerTest {
     @Test
     @DisplayName("Shloud Not Create Contact When First Name is Null")
     void shouldThrowRuntimeExceptionWhenFirstNameIsNull() {
-        ContactManager contactManager = new ContactManager();
-
         Assertions.assertThrows(RuntimeException.class, () -> {
             contactManager.addContact(null, "Gianotto", "0123456789");
         });
@@ -37,8 +47,6 @@ class ContactManagerTest {
     @Test
     @DisplayName("Shloud Not Create Contact When Last Name is Null")
     void shouldThrowRuntimeExceptionWhenLastNameIsNull() {
-        ContactManager contactManager = new ContactManager();
-
         Assertions.assertThrows(RuntimeException.class, () -> {
             contactManager.addContact("Roberto", null, "0123456789");
         });
@@ -47,8 +55,6 @@ class ContactManagerTest {
     @Test
     @DisplayName("Shloud Not Create Contact When Phone Number is Null")
     void shouldThrowRuntimeExceptionWhenPhoneNumberIsNull() {
-        ContactManager contactManager = new ContactManager();
-
         Assertions.assertThrows(RuntimeException.class, () -> {
             contactManager.addContact("Roberto", "Gianotto", null);
         });
