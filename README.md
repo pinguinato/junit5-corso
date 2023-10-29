@@ -56,3 +56,8 @@ Using @RepeatedTest annotation con be executed for multiple repetitions, it repl
 
 ## Parametrized Tests
 
+Similar to repeated test, but there are some differences:
+- Tests are executed with different set of input
+- Substitutes @Test
+- Data is provided using different annotations like @ValueSource, @CsvSource ...
+
