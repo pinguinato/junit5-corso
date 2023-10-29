@@ -36,5 +36,12 @@ In order:
 
 4 and 5 used to perform cleanup tasks for tests
 
+## Conditional Execution
 
+- @EnabledOnOs
+- @DisabledOnOs
+
+        @EnabledOnOs(value = OS.MAC, disabledReason = "Enabled on Mac")
+
+## Assumptions
 
