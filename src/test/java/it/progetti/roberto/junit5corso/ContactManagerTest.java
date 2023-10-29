@@ -111,7 +111,7 @@ class ContactManagerTest {
     // example of Assumption
 
     @Test
-    @DisplayName("Should create contract")
+    @DisplayName("Example of assumption")
     void assumptionsTest() {
         Assumptions.assumeTrue("DEV".equals(System.getProperty("ENV")));
         contactManager.addContact("Roberto", "Gianotto", "0123456789");
@@ -119,5 +119,19 @@ class ContactManagerTest {
         Assertions.assertFalse(contactManager.getAllContacts().isEmpty());
         Assertions.assertEquals(1, contactManager.getContactList().size());
     }
+
+
+    // example of repeated test
+
+    @RepeatedTest(value = 5, name = "Repeating Contact creation test {currentRepetition} of {totalRepetitions}")
+    @DisplayName("Example of repeated test")
+    void repeatedSimpleTest() {
+        contactManager.addContact("Test", "Repeated", "0123456789");
+        // assertion example
+        Assertions.assertFalse(contactManager.getAllContacts().isEmpty());
+    }
+
+
+
 
 }

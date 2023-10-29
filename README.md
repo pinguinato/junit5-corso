@@ -49,3 +49,10 @@ In order:
 
 ## Repeated Tests
 
+Using @RepeatedTest annotation con be executed for multiple repetitions, it replace
+@Test annotation
+
+    @RepeatedTest(value = 5, name = "Repeating Contact creation test {currentRepetition} of {totalRepetitions}")
+
+## Parametrized Tests
+
