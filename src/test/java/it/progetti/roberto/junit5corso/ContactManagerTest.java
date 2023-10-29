@@ -108,4 +108,16 @@ class ContactManagerTest {
                 ));
     }
 
+    // example of Assumption
+
+    @Test
+    @DisplayName("Should create contract")
+    void assumptionsTest() {
+        Assumptions.assumeTrue("DEV".equals(System.getProperty("ENV")));
+        contactManager.addContact("Roberto", "Gianotto", "0123456789");
+        // assertion example
+        Assertions.assertFalse(contactManager.getAllContacts().isEmpty());
+        Assertions.assertEquals(1, contactManager.getContactList().size());
+    }
+
 }
