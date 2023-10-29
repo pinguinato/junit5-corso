@@ -10,6 +10,7 @@ class ContactManagerTest {
         ContactManager contactManager = new ContactManager();
         contactManager.addContact("Roberto", "Gianotto", "0123456789");
         Assertions.assertFalse(contactManager.getAllContacts().isEmpty());
+        Assertions.assertEquals(1, contactManager.getContactList().size());
     }
 
 }
