@@ -142,8 +142,18 @@ class ContactManagerTest {
         Assertions.assertFalse(contactManager.getAllContacts().isEmpty());
     }
 
+    // example of parametrized simple test
 
+    /*
 
+    @RepeatedTest(value = 5, name = "Repeating Contact creation test {currentRepetition} of {totalRepetitions}")
+    @DisplayName("Example of simple parametrized test")
+    void parametrizedTest(String ) {
+        contactManager.addContact("Test", "Repeated", "0123456789");
+        // assertion example
+        Assertions.assertFalse(contactManager.getAllContacts().isEmpty());
+    }
 
+*/
 
 }
