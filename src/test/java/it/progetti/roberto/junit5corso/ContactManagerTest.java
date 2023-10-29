@@ -2,18 +2,20 @@ package it.progetti.roberto.junit5corso;
 
 import org.junit.jupiter.api.*;
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class ContactManagerTest {
 
     private ContactManager contactManager;
 
     // example of @BeforeAll e @BeforeEach
     @BeforeAll
-    public static void setupAll() {
+    public void setupAll() {
         System.out.println("Shloud Print Before All Tests");
     }
 
     @BeforeEach
     public void setup() {
+        System.out.println("Shloud Print after each test");
         contactManager = new ContactManager();
     }
 
@@ -60,5 +62,13 @@ class ContactManagerTest {
         });
     }
 
+    @AfterEach
+    public void tearDown() {
+        System.out.println("Should Execute after each test");
+    }
 
+    @AfterAll
+    public void tearDownAll() {
+        System.out.println("Should Execute at the end of the Test");
+    }
 }
