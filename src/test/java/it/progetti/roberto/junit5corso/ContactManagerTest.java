@@ -26,15 +26,33 @@ class ContactManagerTest {
     // example of testing Exceptions
     @Test
     @DisplayName("Shloud Not Create Contact When First Name is Null")
-    void shouldThrowRuntimeExceptionWhenFirstNameIsNull() {}
+    void shouldThrowRuntimeExceptionWhenFirstNameIsNull() {
+        ContactManager contactManager = new ContactManager();
+
+        Assertions.assertThrows(RuntimeException.class, () -> {
+            contactManager.addContact(null, "Gianotto", "0123456789");
+        });
+    }
 
     @Test
     @DisplayName("Shloud Not Create Contact When Last Name is Null")
-    void shouldThrowRuntimeExceptionWhenLastNameIsNull() {}
+    void shouldThrowRuntimeExceptionWhenLastNameIsNull() {
+        ContactManager contactManager = new ContactManager();
+
+        Assertions.assertThrows(RuntimeException.class, () -> {
+            contactManager.addContact("Roberto", null, "0123456789");
+        });
+    }
 
     @Test
     @DisplayName("Shloud Not Create Contact When Phone Number is Null")
-    void shouldThrowRuntimeExceptionWhenPhoneNumberIsNull() {}
+    void shouldThrowRuntimeExceptionWhenPhoneNumberIsNull() {
+        ContactManager contactManager = new ContactManager();
+
+        Assertions.assertThrows(RuntimeException.class, () -> {
+            contactManager.addContact("Roberto", "Gianotto", null);
+        });
+    }
 
 
 }
