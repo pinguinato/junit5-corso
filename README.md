@@ -10,8 +10,9 @@ Junit is a simple testing framework to write repeatable tests
 
 **Junit test class** is the junit class test file
 
-**Junit Platform** is composed by 3 components:
+**Junit** is composed by 3 components:
 
 - Junit Platform
 - Junit Jupiter
-- 3rd party testing frameworks
+- Junit Vintage
+
