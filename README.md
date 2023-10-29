@@ -1,6 +1,6 @@
 # Corso Junit 5
 
-Link you tube del corso: https://www.youtube.com/watch?v=flpmSXVTqBI&ab_channel=freeCodeCamp.org
+You Tube course link: https://www.youtube.com/watch?v=flpmSXVTqBI&ab_channel=freeCodeCamp.org
 
 What is Junit? 
 
