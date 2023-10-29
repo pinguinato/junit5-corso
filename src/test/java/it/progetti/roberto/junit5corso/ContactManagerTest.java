@@ -131,6 +131,18 @@ class ContactManagerTest {
         Assertions.assertFalse(contactManager.getAllContacts().isEmpty());
     }
 
+    // example of disabled test
+
+    @Disabled
+    @RepeatedTest(value = 5, name = "Repeating Contact creation test {currentRepetition} of {totalRepetitions}")
+    @DisplayName("Example of disabled test")
+    void disabledTest() {
+        contactManager.addContact("Test", "Repeated", "0123456789");
+        // assertion example
+        Assertions.assertFalse(contactManager.getAllContacts().isEmpty());
+    }
+
+
 
 
 

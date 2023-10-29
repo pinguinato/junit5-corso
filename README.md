@@ -61,3 +61,7 @@ Similar to repeated test, but there are some differences:
 - Substitutes @Test
 - Data is provided using different annotations like @ValueSource, @CsvSource ...
 
+## Disabled Tests
+
+Using @Disabled annotation, the test is not executes, is skipped.
+
