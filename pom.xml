@@ -22,7 +22,6 @@
             <version>1.18.30</version>
             <scope>provided</scope>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -30,28 +29,6 @@
             <version>5.7.0</version>
             <scope>test</scope>
         </dependency>
-
-
     </dependencies>
-
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <!--Use this only when using Java 9+-->
-                    <release>17</release>
-                    <!--
-                    Uncomment this and comment out <release> when using Java 8
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    -->
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
